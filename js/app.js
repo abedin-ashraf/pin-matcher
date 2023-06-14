@@ -34,10 +34,26 @@ document.getElementById('key-pad').addEventListener('click', function (event) {
 function verifyPin() {
     const pin = document.getElementById('display-pin').value;
     const typedNumbers = document.getElementById('typed-numbers').value;
+
+    const successNotification = document.getElementById('notify-success');
+    const failNotification = document.getElementById('notify-fail');
+
+    var attempt = document.getElementById('attempt');
+    var attemptValue = parseInt(attempt.innerText);
+    if (attemptValue > 0) {
+        attempt.innerText = attemptValue - 1;
+    }
+
     if (pin == typedNumbers) {
 
+        successNotification.style.display = 'block';
+        failNotification.style.display = 'none';
     }
     else {
+
+        failNotification.style.display = 'block';
+        successNotification.style.display = 'none';
+
 
     }
 

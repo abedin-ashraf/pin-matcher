@@ -24,10 +24,21 @@ document.getElementById('key-pad').addEventListener('click', function (event) {
         if (number == 'C') {
             calcInput.value = '';
         }
-
     }
     else {
 
         calcInput.value += number;
     }
 })
+
+function verifyPin() {
+    const pin = document.getElementById('display-pin').value;
+    const typedNumbers = document.getElementById('typed-numbers').value;
+    if (pin == typedNumbers) {
+
+    }
+    else {
+
+    }
+
+}
